@@ -1,0 +1,25 @@
+package config
+
+import (
+	"errors"
+	"fmt"
+)
+
+// Get ..
+func Get(appname string) (*GitlabConfig, error) {
+	switch appname {
+	case "ottopay-loan":
+		return &GitlabConfig{
+			Appname: "Ottopay/ottopay-loan",
+			Token:   "k0d3Rah451a",
+			Path:    "/Users/zakyyudha/go/src/ottopay-loan",
+			Command: []string{
+				fmt.Sprintf("%v pull origin development 2>&1", GetGitLocation()),
+			},
+			User:         GetUser(),
+			DiscordWebhook: "",
+		}, nil
+	default:
+		return nil, errors.New("app " + appname + " not registered")
+	}
+}
