@@ -6,7 +6,7 @@ Do whatever you want after receiving a webhook from gitlab
 To setup this project use this step below
 
 ### Run Project
-1. Clone repository https://andromeda.ottopay.id/zaky/gitlab-webhook
+1. Clone repository https://github.com/zakyyudha/gitlab-webhook
 2. Copy config/conf.go.example to config/conf.go
 3. Buka file config/conf.go dan sesuaikan. Config Appname dan Token ini akan disesuaikan pada step berikutnya
 4. Untuk path, pada config digunakan untuk menyimpan informasi path dari projectnya
